@@ -126,3 +126,4 @@ h3{margin:0 0 8px}
   .contact-grid{grid-template-columns:1fr}
 }
 
+html { scroll-behavior: smooth; }
