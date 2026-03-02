@@ -125,5 +125,37 @@ h3{margin:0 0 8px}
   .grid-3{grid-template-columns:1fr}
   .contact-grid{grid-template-columns:1fr}
 }
+.accordion { display: grid; gap: 12px; }
 
+.acc-item {
+  background: rgba(15,26,51,.75);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.acc-item summary{
+  list-style: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.acc-item summary::-webkit-details-marker { display:none; }
+
+.acc-title { font-weight: 700; }
+.acc-meta { color: var(--muted); font-size: .95rem; white-space: nowrap; }
+
+.acc-body{
+  padding: 0 16px 16px 16px;
+  color: var(--muted);
+  border-top: 1px solid var(--line);
+}
+
+.acc-item[open] summary{
+  background: rgba(110,168,254,.07);
+}
 html { scroll-behavior: smooth; }
