@@ -1,12 +1,15 @@
 :root{
-  --bg:#0b1220;
-  --card:#0f1a33;
-  --text:#e7eefc;
-  --muted:#b7c4e6;
-  --accent:#6ea8fe;
-  --line: rgba(255,255,255,.08);
+  --bg:#0B1F3A;        /* Deep navy background */
+  --card:#122B4A;      /* Card surface */
+  --text:#E6EDF5;      /* Main text */
+  --muted:#9FB3C8;     /* Secondary text */
+  --accent:#3A86FF;    /* Engineering blue accent */
+  --line: rgba(230,237,245,.10);  /* Subtle borders */
 }
-
+.hero{
+  padding:56px 0 18px;
+  background: linear-gradient(180deg, rgba(58,134,255,.12), transparent 55%);
+}
 *{box-sizing:border-box}
 html,body{margin:0;padding:0}
 body{
@@ -41,20 +44,25 @@ a:hover{text-decoration:underline}
 .nav a:hover{opacity:1}
 
 .btn{
-  display:inline-flex; align-items:center; justify-content:center;
-  padding:10px 14px; border-radius:12px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding:10px 14px;
+  border-radius:12px;
   background: var(--accent);
-  color: #0b1220;
-  font-weight:700;
+  color: #081427;
+  font-weight:800;
   border:1px solid rgba(255,255,255,.12);
+  box-shadow: 0 10px 24px rgba(0,0,0,.22);
 }
-.btn:hover{filter:brightness(1.06); text-decoration:none}
-.btn-ghost{
-  background: transparent; color: var(--text);
-  border:1px solid rgba(110,168,254,.35);
+.btn:hover{
+  filter:brightness(1.06);
+  transform: translateY(-1px);
+  text-decoration:none;
 }
-.btn-ghost:hover{background: rgba(110,168,254,.08)}
-
+.btn, .card, .chip, .acc-item summary {
+  transition: all .18s ease;
+}
 .hero{padding:56px 0 18px}
 .hero-grid{
   display:grid;
